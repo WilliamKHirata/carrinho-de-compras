@@ -1,6 +1,8 @@
 package br.calebe.exemplos.ex02;
 
-import br.calebe.exemplos.ex02.controller.ClasseExemploController;
+import br.calebe.exemplos.ex01.Produto;
+import br.calebe.exemplos.ex02.controller.EJBAcessoServicos;
+import java.util.List;
 
 /**
  *
@@ -8,15 +10,15 @@ import br.calebe.exemplos.ex02.controller.ClasseExemploController;
  */
 public class ClasseExemplo {
 
-    private ClasseExemploController controller;
+    private EJBAcessoServicos controller;
     private String answer;
 
     public ClasseExemplo() throws Exception {
-        controller = new ClasseExemploController();
+        controller = new EJBAcessoServicos();
     }
 
-    public void run(int i) {
-        answer = controller.metodo(i);
+    public void realizarPagamento(Integer _cartao,String _senha,List<Produto> _listaProdutos) {
+        answer = controller.realizaPagamento(_cartao, _senha, _listaProdutos);
     }
     
     public String getAnswer() {
