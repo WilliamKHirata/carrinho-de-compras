@@ -1,4 +1,4 @@
-Teste de Software
+Teste de Software - JUnit + Mocks
 ===================
 
 Projeto: carrinho-de-compras
